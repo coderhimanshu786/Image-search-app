@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eff5f7;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background-size: cover;
+}
+.logo{
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 100%;
+  z-index: -1;
+  position: absolute;
+  
+}
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Lobster", cursive;
+  text-align: center;
+  margin: 30px auto 60px auto;
+  color: black;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+form {
+  display: flex;
+  justify-content: center; /* to bring center horizontically */
+  align-items: center; /* to bring items center vertically */
+  margin-bottom: 60px;
+}
+#searchInput {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  border-radius: 5px;
+  color: rgb(44, 44, 44);
+}
+#searchBtn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #eff5f7;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+#searchBtn:hover {
+  background-color: #3e8e41;
+}
+.searchResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.searchResult {
+  margin: 0 0 60px 0;
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.searchResult:hover img {
+  transform: scale(1.05);
+}
+.searchResult img {
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.searchResult a {
+  padding: 10px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transform: background-color 0.4s ease-in-out;
+}
+.searchResult:hover a {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#show-more-btn {
+  background-color: #008cba;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: none;
+}
+#show-more-btn:hover {
+  background-color: #0077b5;
+}
+
+@media screen and (max-width: 768px){
+    .searchResult{
+        width: 45%;
+    }
+    .searchResult{
+        padding: 0 12px;
+    }
+}
+@media screen and (max-width: 480px){
+    .searchResult{
+        width: 100%;
+    }
+    form{
+        flex-direction: column;
+    }
+    #searchInput{
+        margin-bottom: 20px;
+        width: 80px;
+    }
+    .searchResult{
+        padding: 0 20px;
+    }
+}
